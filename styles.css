@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7043, #ffb74d); /* Gradient background */
+    padding: 30px;
+    display: flex;
+    
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+#addNote {
+    width: 200px;
+    height: 180px;
+    border-radius: 8px;
+    background-color: #ff7043;
+    color: white;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#addNote:hover {
+    background-color: #e64a19;
+}
+
+.newNotes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.myNote {
+    width: 200px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.myNote:hover {
+    transform: translateY(-10px);
+}
+
+.myNote h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.myNote p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.myNote button {
+    width: 100%;
+    padding: 8px;
+    background-color: #ff7043;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.myNote button:hover {
+    background-color: #e64a19;
+}
+
+.addForm {
+    display: none;
+    width: 320px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.addForm input,
+.addForm textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+textarea {
+    height: 120px;
+}
+
+#addBtn {
+    width: 100%;
+    height: 40px;
+    background-color: #ff7043;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addBtn:hover {
+    background-color: #e64a19;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.head button {
+    background-color: transparent;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .addForm {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .note {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #addNote {
+        width: 150px;
+        height: 150px;
+        font-size: 30px;
+    }
+
+    .myNote {
+        width: 180px;
+    }
+}
